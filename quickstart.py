@@ -101,7 +101,7 @@ def main(time_delta, name, comment, date):
                 'timeZone': 'Europe/Moscow',
             }
         }
-        event = service.events().insert(calendarId='kaltmannmanager@gmail.com', body=event).execute()
+        event = service.events().insert(calendarId='mail', body=event).execute()
         print('Event created: %s' % (event.get('htmlLink')))
 
         creds = None
@@ -116,7 +116,7 @@ def main(time_delta, name, comment, date):
                     'credentials1.json', 'https://www.googleapis.com/auth/tasks')
                 authorization_url, state = flow.authorization_url(
                     access_type='offline',
-                    login_hint='kaltmannmanager@gmail.com',
+                    login_hint='mail',
                     include_granted_scopes='true')
                 flow = InstalledAppFlow.from_client_secrets_file(
                     'credentials1.json', 'https://www.googleapis.com/auth/tasks', state=state)
@@ -155,7 +155,7 @@ def main(time_delta, name, comment, date):
             'due': end_day,
         }
         print(task)
-        event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task).execute()
+        event = service.tasks().insert(tasklist='***', body=task).execute()
         test = event
 
         if time_delta == 7:
@@ -191,7 +191,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_third,
+            event = service.tasks().insert(tasklist='***', body=task_third,
                                            parent=test.get('id')).execute()
             print(event)
             delta = 0
@@ -223,7 +223,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_second,
+            event = service.tasks().insert(tasklist='***', body=task_second,
                                            parent=test.get('id')).execute()
             print(event)
 
@@ -250,7 +250,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_first,
+            event = service.tasks().insert(tasklist='***', body=task_first,
                                            parent=test.get('id')).execute()
             print(event)
 
@@ -284,7 +284,7 @@ def main(time_delta, name, comment, date):
                 'due': end_day,
             }
 
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_second,
+            event = service.tasks().insert(tasklist='***', body=task_second,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -315,7 +315,7 @@ def main(time_delta, name, comment, date):
                 'due': end_day,
             }
 
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_first,
+            event = service.tasks().insert(tasklist='***', body=task_first,
                                            parent=test.get('id')).execute()
 
         elif time_delta == 20:
@@ -358,7 +358,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_seventh,
+            event = service.tasks().insert(tasklist='***', body=task_seventh,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -391,7 +391,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_sixth,
+            event = service.tasks().insert(tasklist='***', body=task_sixth,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -426,7 +426,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_fifth,
+            event = service.tasks().insert(tasklist='***', body=task_fifth,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -462,7 +462,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_fourth,
+            event = service.tasks().insert(tasklist='***', body=task_fourth,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -490,7 +490,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_third,
+            event = service.tasks().insert(tasklist='***', body=task_third,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -523,7 +523,7 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_second,
+            event = service.tasks().insert(tasklist='***', body=task_second,
                                            parent=test.get('id')).execute()
 
             delta = 0
@@ -552,28 +552,17 @@ def main(time_delta, name, comment, date):
                 'notes': '',
                 'due': end_day,
             }
-            event = service.tasks().insert(tasklist='MDk1NzIyOTk3MDg1NjYwODAzODU6MDow', body=task_first,
+            event = service.tasks().insert(tasklist='***', body=task_first,
                                            parent=test.get('id')).execute()
 
             print('task created: %s' % (event.get('htmlLink')))
 
     except Exception:
-        # RestClient restClient = new RestClient()
-        # RestRequest request = new RestRequest()
-        #
-        # request.AddQueryParameter("client_id", "value");
-        # request.AddQueryParameter("client_secret", "value");
-        # request.AddQueryParameter("grant_type", "refresh_token");
-        # request.AddQueryParameter("refresh_token", "value");
-        #
-        # restClient.BaseUrl = new
-        # System.Uri("https://oauth2.googleapis.com/token");
-        # restClient.Post(request);
         params = {
             "grant_type": "refresh_token",
-            "client_id": "51144082947-pu9s84vkl7pok0d1g4bm6u9eqdjdb815.apps.googleusercontent.com",
-            "client_secret": "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",
-            "refresh_token": "1//0coLIKmUL3-TbCgYIARAAGAwSNwF-L9IrYa5knVARuniTMyVxSg95RCiJeys_DT8ZaK1v7990mfskBDdyxO6xKtVh8AGCrovM5nI"
+            "client_id": "id",
+            "client_secret": "secret",
+            "refresh_token": "token"
         }
 
         authorization_url = "https://www.googleapis.com/oauth2/v4/token"
@@ -581,7 +570,6 @@ def main(time_delta, name, comment, date):
         r = requests.post(authorization_url, data=params)
 
         if r.ok:
-            print(4)
             print(r.json()['access_token'])
             tok = str(r.json()['access_token'])
             with open('token.json', "rt", encoding="utf-8") as f:
@@ -590,7 +578,7 @@ def main(time_delta, name, comment, date):
             with open("token.json", "wt", encoding="utf-8") as file:
                 json.dump(data, file, indent=2)
         else:
-            print(2)
+            print("Error")
 
 
 # main(5, 'logo', 'comm', '2022-02-06')
