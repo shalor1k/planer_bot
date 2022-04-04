@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import quickstart
 
-TOKEN = '2141317390:AAE9AOvE09mv43Vq9ONuSmaVlYlQIAtec9Q'
+TOKEN = 'token'
 
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
