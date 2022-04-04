@@ -1,6 +1,6 @@
 # -*- coding: utf-8-*-
 
-TOKEN = 'код вашего токена в telegram, полученный от botfather'
+TOKEN = 'code your telegram token from botfather'
 
 client_secret_calendar = 'credentials.json'
-# указываем путь к скачанному Json
+# the path to the downloaded Json
